@@ -93,4 +93,4 @@ response = openai.chat.completions.create(model="llama3.2", messages=messages)
 # Step 4: print the result
 response_markdown = response.choices[0].message.content
 display(Markdown(response_markdown))
-
+print (response_markdown)
