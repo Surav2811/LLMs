@@ -19,4 +19,4 @@ The technology :
   Use llama 3.2
   Use One-Shot Prompting
   Stream back results and show with formatting
-
+v
