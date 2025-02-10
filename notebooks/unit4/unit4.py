@@ -18,7 +18,7 @@ from langgraph.prebuilt import ToolNode, tools_condition
 from IPython.display import Image, display
 
 
-
+#Enter your Groq API Key in the terminal
 if not os.environ.get("GROQ_API_KEY"):
   os.environ["GROQ_API_KEY"] = getpass.getpass("Enter API key for Groq: ")
 
@@ -26,7 +26,7 @@ embeddings = OllamaEmbeddings(model="llama3")
 model = ChatGroq(model="llama3-8b-8192")
 vector_store = InMemoryVectorStore(embeddings)
 
-# Load and chunk contents of the blog
+# Load and chunk contents of the documentation or any website
 loader = WebBaseLoader(
     web_paths=("https://huggingface.co/learn/deep-rl-course/unit4/what-are-policy-based-methods",),
     bs_kwargs=dict(
